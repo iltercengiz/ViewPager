@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		360101AD1A9F0792003151B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360101AC1A9F0792003151B0 /* Main.storyboard */; };
+		360101B01A9F0ED1003151B0 /* ICViewPagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360101AF1A9F0ED1003151B0 /* ICViewPagerController.m */; };
 		539EF213101999B20C80B670 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C15AE16D244142173D3FB5F /* libPods-Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 		03661E3CAF1ADB3D834CEAB9 /* Pods-ViewPager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewPager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewPager/Pods-ViewPager.debug.xcconfig"; sourceTree = "<group>"; };
 		0D44F725D2B78611E391E5A4 /* libPods-ViewPager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ViewPager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		360101AC1A9F0792003151B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		360101AE1A9F0ED1003151B0 /* ICViewPagerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICViewPagerController.h; sourceTree = "<group>"; };
+		360101AF1A9F0ED1003151B0 /* ICViewPagerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICViewPagerController.m; sourceTree = "<group>"; };
 		4196F6389F007ABAE5BBBB82 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C15AE16D244142173D3FB5F /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EE6365316CD3C205E2D4173 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				6003F59C195388D20070C39A /* ICAppDelegate.h */,
 				6003F59D195388D20070C39A /* ICAppDelegate.m */,
 				360101AC1A9F0792003151B0 /* Main.storyboard */,
+				360101AE1A9F0ED1003151B0 /* ICViewPagerController.h */,
+				360101AF1A9F0ED1003151B0 /* ICViewPagerController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -352,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360101B01A9F0ED1003151B0 /* ICViewPagerController.m in Sources */,
 				6003F59E195388D20070C39A /* ICAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
