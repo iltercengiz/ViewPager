@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.3.2)
+  - Specta (0.3.2)
+  - ViewPager (0.1.0)
+
+DEPENDENCIES:
+  - Expecta
+  - Specta
+  - ViewPager (from `../`)
+
+EXTERNAL SOURCES:
+  ViewPager:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
+  Specta: 698a58ffa5ec948327d3b92eab50ca58d7f4fbe8
+  ViewPager: d198bc6d0cfade1ac507da56be8dc4b81f926f27
+
+COCOAPODS: 0.36.0.rc.1
