@@ -2,6 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target 'ViewPager', :exclusive => true do
   pod "ViewPager", :path => "../"
+  pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 end
 
 target 'Tests', :exclusive => true do

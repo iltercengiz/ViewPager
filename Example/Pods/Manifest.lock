@@ -1,10 +1,12 @@
 PODS:
   - Expecta (0.3.2)
+  - Reveal-iOS-SDK (1.5.1)
   - Specta (0.3.2)
   - ViewPager (0.1.0)
 
 DEPENDENCIES:
   - Expecta
+  - Reveal-iOS-SDK
   - Specta
   - ViewPager (from `../`)
 
@@ -14,6 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
+  Reveal-iOS-SDK: dcfeb671c7da222c85f18f866da2ce88de075524
   Specta: 698a58ffa5ec948327d3b92eab50ca58d7f4fbe8
   ViewPager: d198bc6d0cfade1ac507da56be8dc4b81f926f27
 
