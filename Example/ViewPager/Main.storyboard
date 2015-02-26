@@ -24,6 +24,36 @@
             </objects>
             <point key="canvasLocation" x="1025" y="1164"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="WLx-H0-HaQ">
+            <objects>
+                <viewController storyboardIdentifier="ContentViewController" id="Mho-E8-YX1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WiQ-vd-F6H"/>
+                        <viewControllerLayoutGuide type="bottom" id="pkf-XS-BGm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VC9-Z1-2Bg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9N-I0-zIV">
+                                <rect key="frame" x="280" y="290" width="40" height="20"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="P9N-I0-zIV" secondAttribute="centerY" id="kcC-ab-UBV"/>
+                            <constraint firstAttribute="centerX" secondItem="P9N-I0-zIV" secondAttribute="centerX" id="mgr-B0-sLg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t0D-yp-NqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="1164"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TcP-XP-Bhc">
             <objects>
