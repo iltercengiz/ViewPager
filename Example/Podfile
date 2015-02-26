@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ViewPager', :exclusive => true do
+  pod "ViewPager", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ViewPager", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+end
