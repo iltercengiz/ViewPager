@@ -10,8 +10,6 @@
 
 @interface ICViewPagerController () <ViewPagerControllerDataSource>
 
-@property (nonatomic) NSMutableArray *cache;
-
 @end
 
 @implementation ICViewPagerController
@@ -23,12 +21,6 @@
     [super viewDidLoad];
     
     self.title = @"View Pager";
-    
-    self.cache = [NSMutableArray arrayWithCapacity:10];
-    
-    for (NSInteger index = 0; index < 10; index++) {
-        [self.cache addObject:[NSNull null]];
-    }
     
     self.dataSource = self;
     
@@ -42,18 +34,12 @@
 
 - (UIViewController *)viewPagerController:(ViewPagerController *)viewPagerController controllerForTabAtIndex:(NSUInteger)index {
     
-    UIViewController *vc;
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewController"];;
     
-    if ([[self.cache objectAtIndex:index] isEqual:[NSNull null]]) {
-        vc = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentViewController"];
-        
-        vc.view.backgroundColor = [UIColor colorWithWhite:244.0/255.0 alpha:1.0];
-        
-        UILabel *label = (UILabel *)[vc.view viewWithTag:1];
-        label.text = [NSString stringWithFormat:@"%li", index];
-    } else {
-        vc = [self.cache objectAtIndex:index];
-    }
+    vc.view.backgroundColor = [UIColor colorWithWhite:244.0/255.0 alpha:1.0];
+    
+    UILabel *label = (UILabel *)[vc.view viewWithTag:1];
+    label.text = [NSString stringWithFormat:@"%li", index];
     
     return vc;
     
@@ -61,19 +47,13 @@
 
 - (UIView *)viewPagerController:(ViewPagerController *)viewPagerController viewForTabAtIndex:(NSUInteger)index {
     
-    UILabel *l;
+    UILabel *l = [UILabel new];
     
-    if ([[self.cache objectAtIndex:index] isEqual:[NSNull null]]) {
-        l = [UILabel new];
-        
-        l.backgroundColor = [UIColor colorWithWhite:192.0/255.0 alpha:1.0];
-        l.text = [NSString stringWithFormat:@"%li", index];
-        l.textAlignment = NSTextAlignmentCenter;
-        
-        [l sizeToFit];
-    } else {
-        l = [self.cache objectAtIndex:index];
-    }
+    l.backgroundColor = [UIColor colorWithWhite:192.0/255.0 alpha:1.0];
+    l.text = [NSString stringWithFormat:@"%li", index];
+    l.textAlignment = NSTextAlignmentCenter;
+    
+    [l sizeToFit];
     
     return l;
     
