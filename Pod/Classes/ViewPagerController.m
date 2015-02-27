@@ -78,6 +78,20 @@
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
     
+    // Gesture recognizers of page view controller
+    UIScrollView *queuingScrollView = [[self.pageViewController.view subviews] objectAtIndex:0];
+    NSArray *gestureRecognizers = queuingScrollView.gestureRecognizers;
+    
+    UIGestureRecognizer *gestureRecognizer;
+    
+    // Find UIScrollViewPanGestureRecognizer
+    for (gestureRecognizer in gestureRecognizers) {
+        if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) { // Gotcha!
+            [gestureRecognizer addTarget:self action:@selector(didPan:)];
+            break;
+        }
+    }
+    
     // Create and add collection view controller
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -122,6 +136,16 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - IBAction
+
+- (IBAction)didPan:(id)sender {
+    
+    UIPanGestureRecognizer *pan = (UIPanGestureRecognizer *)sender;
+    
+    NSLog(@"translationInView: %@", NSStringFromCGPoint([pan translationInView:self.pageViewController.view]));
+    
 }
 
 #pragma mark - Setter
